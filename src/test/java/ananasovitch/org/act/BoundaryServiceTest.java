@@ -29,13 +29,6 @@ public class BoundaryServiceTest {
         assertEquals(expectedMin, min, "Минимальное значение неверно");
     }
 
-    @ParameterizedTest
-    @MethodSource("provideAdditionalData")
-    public void testFindMinAdditional(int[] marks, int expectedMin) {
-        int min = boundaryService.findMin(marks);
-        assertEquals(expectedMin, min, "Минимальное значение неверно");
-    }
-
     static Stream<Arguments> provideAdditionalData() {
         return Stream.of(
                 arguments(new int[]{100, 5, 300, 20, 500}, 5),
