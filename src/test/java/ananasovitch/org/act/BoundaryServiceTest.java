@@ -32,16 +32,15 @@ public class BoundaryServiceTest {
     @ParameterizedTest
     @MethodSource("provideAdditionalData")
     public void testFindMinAdditional(int[] marks, int expectedMin) {
-        // Вносим изменения в тест, чтобы он падал
         int min = boundaryService.findMin(marks);
-        assertEquals(expectedMin + 1, min, "Минимальное значение неверно");
+        assertEquals(expectedMin, min, "Минимальное значение неверно");
     }
-
     static Stream<Arguments> provideAdditionalData() {
         return Stream.of(
                 arguments(new int[]{100, 5, 300, 20, 500}, 5),
                 arguments(new int[]{-10, -20, -3, -40, -5}, -40),
                 arguments(new int[]{10, 20, 30, 40, 5}, 5)
+
         );
     }
 }
