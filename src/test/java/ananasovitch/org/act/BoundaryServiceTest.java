@@ -25,7 +25,6 @@ public class BoundaryServiceTest {
     @MethodSource("provideData")
     public void testFindMin(int[] marks, int expectedMin) {
         int min = boundaryService.findMin(marks);
-        // Измененный ожидаемый результат
-        assertEquals(0, min, "Минимальное значение неверно");
+        assertEquals(expectedMin, min, "Минимальное значение неверно");
     }
 }
