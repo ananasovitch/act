@@ -11,7 +11,7 @@ import static org.junit.jupiter.params.provider.Arguments.arguments;
 
 public class BoundaryServiceTest {
 
-    private  BoundaryService boundaryService = new BoundaryService();
+    private final BoundaryService boundaryService = new BoundaryService();
 
     static Stream<Arguments> provideData() {
         return Stream.of(
